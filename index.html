@@ -1,0 +1,135 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Nom du projet</title>
+	<link rel="stylesheet" href="style/reset.css">
+	<link rel="stylesheet" href="style/style.css">
+
+</head>
+
+<body>
+	<video autoplay loop id="background">
+			<source src="video/baxkground.mp4" type="video/mp4">
+	</video>
+	<header>
+		<div>
+			<div id="telecharger"><a href="#pageTelecharger">Telecharger</a></div>
+			<div id="titreHeader"><a href="#pageAccueil">Notre Projet</a></div>
+			<div id="savoirPlus" class="vers_Apropos"></div>
+		</div>
+	</header>
+	<div id="pageAccueil">
+		<div id="titrePrincipal">
+			<div>
+				<h1>HOME STUDIO</h1>
+				<h2>Créé ta propre musique !</h2>
+			</div>
+		</div>
+		<div id="annotation">
+			Background créé à la main grâce aux logiciels Cinema 4D et AfterEffects
+		</div>
+		<div class="entrez entrezTitre">
+			<div>Entrez</div>
+			<div><a href="#pageTelecharger"><img src="image/fleche.svg" alt="fleche_entrez"/></a></div>
+		</div>
+	</div>
+	<div id="pageTelecharger">
+		<div id="titreTelecharger">
+			<h1>Choisissez votre version...</h1>
+		</div>
+		<div id="conteneurTelecharger">
+			<a href="telechargements/Mac.app.zip" download="HomeStudioIOS_Simon.zip" class="telecharger">
+				<div class="blocTelecharger">
+				OS X
+				</div>
+				<div class="tailleFichier">
+					<span style="font-weight: bold">Taille</span> : 33.9 Mo
+				</div>
+			</a>
+			<a href="telechargements/HomeStudio_v2.zip" download="HomeStudioWin_Simon.zip" class="telecharger">
+				<div class="blocTelecharger">
+				Windows
+				</div>
+				<div class="tailleFichier">
+					<span style="font-weight: bold">Taille</span> : 33.4 Mo
+				</div>
+			</a>
+			<a href="telechargements/Linux.zip" download="HomeStudioLinux_Simon.zip" class="telecharger">
+				<div class="blocTelecharger" >
+				Linux
+				</div>
+				<div class="tailleFichier">
+					<span style="font-weight: bold">Taille</span> : 35.4 Mo
+				</div>
+			</a>
+
+		</div>
+		<div class="entrez entrezMain">
+			<div>En savoir plus</div>
+			<div>
+				<!--<a href="#pageApropos">-->
+					<img class="vers_Apropos" src="image/fleche.svg" alt="fleche_entrez"/>
+				<!--</a>-->
+			</div>
+		</div>
+	</div>
+	<div id="pageApropos">
+		<img src="image/menu.svg" alt="ouvrir_menu" id="ouvrir_menu"/>
+		<div id="menuGauche">
+			<img src="image/cross.svg" alt="fermer" id="fermer_menu"/>
+			<div id="btnPourquoi">Pourquoi ?</div>
+			<div id="btnStyles">Styles</div>
+			<div id="btnContact">Contact</div>
+		</div>
+		<div id="contenu">
+			<div id="conteneurPourquoi">
+				<div id="menuPourquoi">
+					<div id="cadre">
+						<div id="titre">Pourquoi ce projet ? / Comment je m'y suis pris ?</div>
+					</div>
+				</div>
+				<div id="textePourquoi">
+					<h1>Pourquoi ?</h1>
+					<article>
+						<p>
+						HomeStudio est un projet étudiant, créé de toute pièce par Simon DELINEAU.
+Ce projet a été mis en place au cours du DUT Métiers du Multimédia et de l'Internet (MMI), à l'IUT Nancy Charlemagne.
+Le but du projet était de créer un site/programme interactif sur le thème de la musique, afin d'en apprendre davantage sur un instrument, un style de musique, etc...
+Pour ma part, j'ai choisi de créer un programme de composition musicale, HomeStudio.
+							</p>
+						<p>
+
+Le principe est simple : vous avez le choix entre 4 styles de musiques différents (metal, rock, pop et electronique). Chaque style est composé de 4 à 5 instrumnets, qui ont chacun 5 samples à leur disposition. Chaque sample a été travaillé afin d'être cohérent avec tout autre sample du même style.
+Votre but sera de mélanger tous ces samples afin de créer votre propre rythme.
+							</p>
+<p>
+Par manque de temps et d'expériences, chaque style à un tempo fixe, et chaque sample dure 2 mesures.
+	</p>
+<p>
+Le programme a été créé sur Unity, et le site a été conçu à la main, en HTML5, CSS3, JavaScript, et grâce à la librairie jQuery, et le background du site à été modélisé et rendu grâce aux logiciels Cinema4D et Adobe AfterEffects.
+	</p>
+
+					</article>
+				</div>
+			</div>
+			<div class="entrez entrezApropos">
+				<div>Retourner en haut</div>
+				<div><a href="#pageTelecharger"><img src="image/fleche.svg" alt="fleche_entrez"/></a></div>
+			</div>
+
+		</div>
+
+	</div>
+	<script src="js/jquery-3.2.0.min.js"></script>
+	<script src="js/jquery.localScroll.min.js"></script>
+	<script src="js/jquery.scrollTo.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$.localScroll();
+		});
+	</script>
+	<script src="js/script.js"></script>
+
+</body>
+</html>

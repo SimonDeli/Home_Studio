@@ -1,0 +1,539 @@
+@font-face{
+	font-family:"Font_Titre";
+	src:url(../fonts/ma_police.TTF);
+}
+html {
+	height:100%;
+}
+body {
+	/*background-image: url(../image/background.jpg);*/
+	/*background-image: radial-gradient(circle at center, rgb(21, 21, 21) 20%, rgb(40, 40, 40) 100%);*/
+	/*background-attachment: fixed;*/
+	height:100%;
+	overflow:hidden;
+}
+
+a {
+	text-decoration:none;
+}
+video#background{
+	position:fixed;
+	min-width:100%;
+	min-height:100%;
+	width:auto;
+	height:auto;
+	z-index:-9999;
+	transition:all 1s;
+}
+
+header {
+	height:auto;
+	position:fixed;
+	width:100%;
+	z-index:1;
+	transition:all 1s;
+	/*border-bottom:solid 1px white;*/
+}
+header:after {
+	content:"";
+	display:block;
+	width:90%;
+	height:1px;
+	background-color:white;
+	margin: 0 auto;
+}
+header > div {
+	display:flex;
+}
+header #telecharger {
+	/*display:inline;*/
+	flex:1;
+	text-align:center;
+	font-family:"Calibri";
+	padding:10px 10px;
+	font-size:1.3em;
+	position:relative;
+	left:5%;
+	background:#e55757;
+	margin:10px 10px;
+	border-radius:5px;
+}
+header a {
+	text-decoration: none;
+	color:white;
+}
+header #titreHeader a {
+	color:#e55757;
+}
+header #titreHeader{
+	flex:8;
+	font-family:"Font_Titre";
+	margin:auto;
+	text-align:center;
+	font-variant: small-caps;
+	font-size:2em;
+}
+header #savoirPlus{
+	flex:1;
+	text-align:center;
+	font-family:"Calibri";
+	padding:10px 10px;
+	color:white;
+	font-size:1.3em;
+	position:relative;
+	right:5%;
+	margin:10px 10px;
+}
+
+#pageAccueil {
+	
+	display:flex;
+	flex-direction:column;
+	height:100%;
+	
+}
+#pageTelecharger {
+	z-index:-9999;
+	height:100%;
+	position:relative;
+	display:flex;
+	flex-direction: column;
+	transition:all 1s;
+	/*background-image: radial-gradient(circle at center, rgb(221, 221, 221) 20%, rgb(240, 240, 240) 100%);*/
+	/*background:red;*/
+}
+#pageApropos{
+	z-index:1;
+	height:100%;
+	position:relative;
+	display:flex;
+	/*flex-direction: column;*/
+	/*background:rgba(180, 180, 180, 0.5);*/
+	/*background:rgba(140, 140 ,140, 0.2);*/
+	
+	/*padding:0 40px 0 40px;*/
+	/*transition:top 2s;*/
+	/*background:red;*/
+}
+#pageApropos > img {
+	position:absolute;
+	width:60px;
+	height:auto;
+	top:5%;
+	left:2%;
+	z-index:999;
+	cursor:pointer;
+}
+
+#menuGauche {
+	z-index:9999;
+	position:absolute;
+	left:-30%;
+	width:25%;
+	height:100%;
+	background:rgb(220, 220, 220);
+	display:flex;
+	flex-direction:column;
+	
+}
+#menuGauche:after {
+	content:"";
+	display:block;
+	height:20px;
+	background:#e55757;
+	color:white;
+	width:100%;
+	
+	margin-top:50px;
+}
+#menuGauche img {
+	width:30px;
+	height:auto;
+	position:absolute;
+	right:20px;
+	top:20px;
+	padding:5px;
+	transition:all 0.5s;
+	cursor:pointer;
+}
+#menuGauche img:hover {
+	background:#e55757;
+}
+#menuGauche > div {
+	color:#212121;
+	font-family:"Calibri Light";
+	font-variant: small-caps;
+	font-size:1.5em;
+	margin-top:50px;
+	margin-left:30px;
+	transition:all 0.5s;
+	width:30%;
+	height:50px;
+	line-height:50px;
+	padding:5px;
+}
+#menuGauche > div:after {
+	content:"";
+	display:block;
+	height:1px;
+	background:white;
+	color:white;
+	width:50%;
+	margin-left:10px;
+	margin-top:10px;
+}
+#menuGauche > div:hover {
+	background:#e55757;
+	color:white;
+	cursor:pointer;
+}
+
+#annotation{
+	position:absolute;
+	font-family: Calibri;
+	right:2%;
+	top:2%;
+	color:rgba(230, 230, 230, 0.8);
+	font-style: italic;
+}
+
+
+#titrePrincipal{
+	flex:9;
+	display:flex;
+	
+}
+#titrePrincipal div {
+	margin:auto;
+	display:flex;
+	flex-direction:column;
+}
+#titrePrincipal h1 {
+	text-align:center;
+	margin:auto;
+	
+}
+#titrePrincipal h2 {
+	color:white;
+	margin:auto;
+	font-size:3em;
+	font-family:"Font_Titre";
+	font-style: italic;
+}
+#titrePrincipal h1 {
+	font-size:10em;
+	color:#e55757;
+	margin:auto auto;
+	position:relative;
+	/*top:-50px;*/
+	font-family:"Font_Titre";
+}
+#titreTelecharger {
+	flex:2;
+	position:relative;
+	top:20%;
+	text-align:center;
+	display:flex;
+}
+#titreTelecharger h1 {
+	font-family:"Font_Titre";
+	color:white;
+	font-size:2em;
+	margin: auto;
+}
+.entrez {
+	flex:1;
+	text-align:center;
+	font-family:"Calibri";
+	font-size:1.5em;
+	color:white;
+	font-variant: small-caps;
+}
+.entrez img {
+	width:40px;
+	height:auto;
+	margin:10px;
+	transition:all 1s;
+	cursor:pointer;
+}
+.entrez img:hover {
+	transform:scale(0.9);
+}
+.entrezApropos img {
+	transform:rotate(180deg);
+}
+.entrezApropos img:hover {
+	transform:rotate(180deg); 
+}
+/*.entrezMain{
+	position:relative;
+	top:43%;
+}*/
+.blocTelecharger {
+	position:relative;
+	/*height:300px;*/
+	padding:100px 10px;
+	width:100%;
+	margin:auto;
+	background:rgba(140, 140, 140, 0.2);
+	box-shadow:0px 0px 100px 10px rgba(140, 140, 140, 0.2);
+	border:white solid 1px;
+	transform:scale(1);
+	text-align:center;
+	font-family:"Font_Titre";
+	font-size:5em;
+	/*border-radius:20px;*/
+	filter:brightness(0.8);
+	transition:all 0.5s;
+	color:white;
+}
+.blocTelecharger:hover {
+	box-shadow:none;
+	border:solid rgba(0, 0, 0, 0) 1px;
+	filter:brightness(1);
+	background:#e55757;
+	transform:scale(1.02);
+}
+#conteneurTelecharger{
+	flex:9;
+	display:flex;
+	width:90%;
+	margin:0 auto;
+	justify-content: space-between;
+}
+#conteneurTelecharger a {
+	display:flex;
+	margin:auto 0;
+	width:30%;
+}
+
+.telecharger{
+	display:flex;
+	flex-direction: column;
+}
+.tailleFichier {
+	color:white;
+	font-family: Calibri;
+	font-size:1.2em;
+	margin-top:10px;
+}
+
+
+
+/*STYLE_APROPOS*/
+#contenu {
+	height:100%;
+	width:100%;
+	position:relative;
+	display:flex;
+	flex-direction: column;
+	background:rgba(140, 140 ,140, 0.2);
+	filter:brightness(1);
+	padding:0 40px 0 40px;
+	transition:all 0.8s;
+}
+
+#conteneurApropos{
+	margin:0 auto;
+	display:flex;
+	flex-direction:column;
+	height:auto;
+	flex:9;
+	width:90%;
+	
+}
+#textePhoto{
+	display:flex;
+	flex:7;
+}
+#texte, #photo{
+	height:90%;
+	/*margin:auto 10px;*/
+}
+
+#conteneurApropos #colonneMenu{
+	/*background:green;*/
+	flex:1;
+	display:flex;
+	justify-content: space-between;
+	margin-top:50px;
+	margin-bottom:20px;
+	background:#e55757;
+	padding:20px;
+}
+#conteneurApropos #colonneMenu > div {
+	/*margin:auto;*/
+	width:80%;
+	height:30%;
+	font-size:2em;
+	font-family:"Calibri Light";
+	font-variant: small-caps;
+	padding:20px;
+	color:white;
+	/*border-radius:30px;*/
+	filter:brightness(0.8);
+	/*background:rgba(255, 255, 255, 0.5);*/
+	transition:all 0.5s;
+	text-align:center;
+	display:flex;
+	margin:auto;
+}
+#conteneurApropos #colonneMenu > div:hover {
+	/*border:solid rgba(0, 0, 0, 0) 1px;*/
+	background:#924A4A;
+	filter:brightness(1);
+}
+#conteneurApropos #colonneMenu > div > div {
+	margin:auto;
+	width:100%;
+}
+
+#conteneurApropos #texte{
+	flex:2;
+	font-size:1.3em;
+	font-family:'Calibri Light';
+	padding:10px;
+	text-align:justify;
+	color:white;
+	transition: all 0.5s;
+	overflow:hidden;
+	
+}
+#conteneurApropos #texte h1 {
+	font-size:4.8em;
+	/* 	text-align:right;*/
+	padding:10px;
+	font-family:"Font_Titre";
+}
+#conteneurApropos #photo {
+	/*border:white 1px solid;*/
+	flex:1;
+	overflow:hidden;
+	transition:all 0.8s;
+	box-shadow: 0px 0px 5px 5px rgba(21, 21, 21, 0.5);
+}
+#photo img {
+	height:100%;
+	width:auto;
+	position:relative;
+	left:-50%;
+	filter:brightness(0.8);
+}
+#conteneurApropos #texte p {
+	text-align:justify;
+	margin:10px auto;
+	width:80%;
+	margin-right:50px;
+}
+
+/*POURQUOI_APROPOS*/
+
+#conteneurPourquoi{
+	margin:10% auto 0;
+	display:flex;
+	flex:9;
+	/*background:red;*/
+	width:90%;
+	height:auto;
+	font-family:"Calibri Light";
+	color:white;
+}
+
+#menuPourquoi{
+	display:flex;
+	flex-direction:column;
+	justify-content: space-around;
+	flex:2;
+	font-variant: small-caps;
+	
+	margin:0px 80px;
+}
+#menuPourquoi #cadre {
+	margin:auto;
+	width:100%;
+	height:65%;
+	background:#e55757;
+	display:flex;
+}
+#menuPourquoi #titre {
+	font-size:1.6em;
+	text-align:center;
+	transition: all 0.5s;
+	padding:20px;
+	margin:auto;
+}
+#menuPourquoi #titre:hover {
+	background:#924A4A;
+	cursor:pointer;
+}
+
+#textePourquoi{
+	flex:7;
+}
+#textePourquoi h1{
+	font-family:"Font_Titre";
+	font-size:4.8em;
+	text-align:center;
+	margin:25px;
+}
+#textePourquoi article {
+	text-align:justify;
+	font-size:18px;
+	border:white solid 1px;
+	padding:50px;
+	height:50%;
+	overflow:hidden;
+}
+#textePourquoi article p {
+	margin:10px 0;
+}
+
+/*CONTACT_APROPOS*/
+#conteneurContact {
+	color:white;
+	margin-top:80px;
+	font-family:"Calibri Light";
+}
+#conteneurContact h1 {
+	text-align:center;
+	font-size:4.8em;
+	font-family:"Font_Titre";
+}
+#formContact {
+	width:50%;
+	margin:0 auto;
+	display:flex;
+	flex-direction:column;
+	position:relative;
+}
+#formContact label {
+	margin-top:20px;
+	font-size:1.2em;
+	margin-bottom:10px;
+}
+#formContact input {
+	margin-bottom:20px;
+	height:25px;
+	padding:2px;
+}
+#formContact #boutton_envoyer {
+	width:20%;
+	position:relative;
+	left:80%;
+	top:10px;
+	background:#e55757;
+	border:none;
+	color:white;
+	padding:5px;
+	cursor:pointer;
+	border-radius:5px;
+}
+.entrezContact {
+	position:relative;
+	top:10%;
+}
+#rock_btn, #pop_btn, #electro_btn, #metal_btn {
+	cursor: pointer;
+}
+
+
